@@ -1,32 +1,26 @@
-import Image from 'next/image'
-import React from 'react'
+import Expertise from "@/components/Expertise";
+import HeroSection from "@/components/HeroSection";
+import Projects from "@/components/Projects";
+import Testimonials from "@/components/Testimonials";
+import React from "react";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-[300vh] mt-20">
-      <section className="flex items-center justify-center bg-gray-text h-[100vh] text-center self-center font-bold text-2xl">
-        Home page
+    <main className="flex flex-col w-full bg-gray-text">
+      <section className="pb-[7.5rem]">
+        <HeroSection />
       </section>
-      <section
-        id="expertise"
-        className="flex items-center justify-center h-[100vh] text-center self-center font-bold text-2xl"
-      >
-        expertise
+      <section id="expertise" className="py-[7.5rem]">
+        <Expertise />
       </section>
-      <section
-        id="projects"
-        className="flex items-center justify-center h-[100vh] bg-gray-text text-center self-center font-bold text-2xl"
-      >
-        projects
+      <section id="projects" className="py-[7.5rem]">
+        <Projects />
       </section>
-      <section
-        id="testimonials"
-        className="flex items-center justify-center h-[100vh] text-center self-center font-bold text-2xl"
-      >
-        testimonials
+      <section id="testimonials" className="py-[7.5rem]">
+        <Testimonials />
       </section>
-    </div>
+    </main>
   );
-}
+};
 
-export default Home
+export default Home;

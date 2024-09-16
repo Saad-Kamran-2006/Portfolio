@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: '500',
-  variable: '--font-mont'
- });
+  weight: "500",
+  variable: "--font-mont",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,10 +21,11 @@ const RootLayout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth focus:scroll-auto">
       <body className={`${montserrat.variable} font-mont bg-light`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
